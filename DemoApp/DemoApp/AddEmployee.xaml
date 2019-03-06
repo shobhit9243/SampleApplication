@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="DemoApp.AddEmployee" Title="Add Employee" BackgroundColor="Silver">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" Padding="40">
+            <Label Text="Add new Employee">
+            </Label>
+            <Label Text="Enter Name : ">
+            </Label>
+            <Entry x:Name="name" Placeholder="Name">
+            </Entry>
+            <Label Text="Enter Address : ">
+            </Label>
+            <Entry x:Name="address" Placeholder="Address">
+            </Entry>
+            <Label Text="Enter Designation : ">
+            </Label>
+            <Entry x:Name="designation" Placeholder="Designation">
+            </Entry>                     
+            <Picker x:Name="pickerNationality" Title="Select Nationality">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Indian</x:String>
+                        <x:String>American</x:String>
+                        <x:String>Australian</x:String>
+                        <x:String>Nepal</x:String>
+                        <x:String>Burma</x:String>
+                        <x:String>Figi</x:String>
+                        <x:String>European</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            <Picker x:Name="PickerSex" Title="Select Sex">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Male</x:String>
+                        <x:String>Female</x:String>                       
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            <DatePicker MinimumDate="01/01/1900" x:Name="PickerDob"
+            MaximumDate="12/31/2018"
+            Date="01/01/1900" />
+            <Image x:Name="UserImg" HeightRequest="50" WidthRequest="50"></Image>
+            <Button x:Name="selectImg" Text="Select Image" Clicked="Handle_Clicked_1"/>
+             <Button Text="Submit" Clicked="Handle_Clicked">
+            </Button> 
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

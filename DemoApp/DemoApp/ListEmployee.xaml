@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="DemoApp.ListEmployee" Title="List" BackgroundColor="White">
+    <ContentPage.Content>
+        <StackLayout Spacing="10" Padding="10">
+            <Label Text="List of Employee !!" FontSize="20">
+            </Label>
+            <ListView x:Name="listEmployee" ItemsSource="{Binding Employees}" HasUnevenRows="true">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout HorizontalOptions="FillAndExpand">
+                                <Label Text="{Binding Name}" TextColor="Black" FontSize="Default" HeightRequest="50">
+                                </Label>
+                                <Label Text="{Binding Designation}" TextColor="Black" FontSize="Default" HeightRequest="50">
+                                </Label>
+                                <Label Text="{Binding Address}" TextColor="Black" FontSize="Default" HeightRequest="50">
+                                </Label>
+                                 <Label Text="{Binding DOB}" TextColor="Black" FontSize="Default" HeightRequest="50">
+                                </Label>
+                                 <Label Text="{Binding Nationality}" TextColor="Black" FontSize="Default" HeightRequest="50">
+                                </Label>
+                                 <Label Text="{Binding Sex}" TextColor="Black" FontSize="Default" HeightRequest="50">
+                                </Label>
+                                <Image Source="{Binding Imagepath}" HeightRequest="50" WidthRequest="50"/>
+                                <BoxView HeightRequest="2" HorizontalOptions="FillAndExpand" BackgroundColor="Silver"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

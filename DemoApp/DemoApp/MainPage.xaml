@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms" 
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:local="clr-namespace:DemoApp" 
+                  x:Class="DemoApp.MainPage" 
+                  Title="master"
+                  MasterBehavior="Popover" 
+                  BackgroundColor="White"
+                  Icon="hamburger.png">
+    <MasterDetailPage.Master>
+        <ContentPage Padding="10" BackgroundColor="White" Title=" " Icon="hamburger.png">
+            <ContentPage.Content>
+                <StackLayout Margin="5,30,5,5">                    
+                    <Label Text="Menu">
+                    </Label>
+                    <Button Text="Add Employee" BackgroundColor="White" Clicked="Button_Clicked">
+                    </Button>
+                    <Button Text="List Employee" BackgroundColor="White" Clicked="Button_Clicked2">
+                    </Button>                    
+                </StackLayout>
+            </ContentPage.Content>
+        </ContentPage>
+    </MasterDetailPage.Master>  
+</MasterDetailPage>

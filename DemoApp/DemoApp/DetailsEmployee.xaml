@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>  
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"  
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"  
+             x:Class="DemoApp.DetailsEmployee" Title="Details" 
+             xmlns:local="clr-namespace:DemoApp"
+             BackgroundColor="Silver">  
+    <ContentPage.Content>  
+        <StackLayout>  
+            <Label Text="Details of employee!!" />  
+            <local:CustomLabel FontSize="14.5"  
+                                      CurvedBackgroundColor="#6DB040"  
+                                      TextColor="White"  
+                                      Text="{Binding EmployeeModel.Name}"
+                                      HorizontalOptions="FillAndExpand"  
+                                      CurvedCornerRadius="16"  
+                                      HeightRequest="40"  
+                                      VerticalTextAlignment="Center"  
+                                      HorizontalTextAlignment="Center"/>             
+            <Label x:Name="address" Text="{Binding EmployeeModel.Address}"></Label>  
+            <Label x:Name="designation" Text="{Binding EmployeeModel.Designation}"></Label> 
+             <Label x:Name="nationality" Text="{Binding EmployeeModel.Nationality}"></Label> 
+             <Label x:Name="sex" Text="{Binding EmployeeModel.Sex}"></Label> 
+             <Label x:Name="dob" Text="{Binding EmployeeModel.DOB}"></Label>             
+            <Image HeightRequest="50" WidthRequest="50" x:Name="uimg" Source="{Binding EmployeeModel.Imagepath}"/>
+            <Button Text="Save" Command="{Binding CMDAddEmployee}"></Button>  
+            <Button Text="Show Native Page" Command="{Binding CMDShowNative}"></Button>  
+        </StackLayout>  
+    </ContentPage.Content>  
+</ContentPage>  
